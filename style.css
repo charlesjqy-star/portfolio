@@ -1,0 +1,42 @@
+:root{color-scheme:light;--paper:#f7f5ed;--ink:#172822;--muted:#4d5c55;--line:#c6cdc1;--green:#174f3f}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.58 "Inter","Segoe UI",sans-serif}
+a{color:var(--green);text-underline-offset:.2em}
+a:focus-visible,video:focus-visible{outline:3px solid #ad592c;outline-offset:4px}
+.bar,main,footer{width:min(1190px,calc(100% - 52px));margin:auto}
+.bar,footer{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.4rem 0;border-bottom:1px solid var(--line)}
+.bar a,footer a{text-decoration:none}
+nav{display:flex;gap:clamp(.65rem,3vw,2rem);flex-wrap:wrap}
+.brand,footer span{font-weight:750}
+.hero{min-height:595px;display:grid;grid-template-columns: .87fr 1.13fr;align-items:center;gap:clamp(2rem,5vw,5rem);padding:4.5rem 0}
+h1,h2,h3,p,figure{margin:0}
+h1,h2{font-family:"Instrument Serif",Georgia,serif;line-height:1.02;font-weight:500;letter-spacing:-.055em}
+h1{font-size:clamp(5rem,11vw,9.5rem)}
+h2{font-size:clamp(2.8rem,6vw,5.3rem)}
+h3{font-size:1.22rem;line-height:1.3;margin-bottom:.55rem}
+.label{color:var(--green);font-size:.77rem;font-weight:750;letter-spacing:.11em;text-transform:uppercase;margin-bottom:1rem}
+.intro{max-width:36ch;margin-top:1.4rem;color:var(--muted);font-size:1.1rem}
+.actions{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1.6rem}
+.button{border:1px solid var(--green);padding:.65rem 1rem;text-decoration:none;font-weight:700;font-size:.91rem}
+.button:hover{background:#e5ebdf}.primary{background:var(--green);color:white}.primary:hover{background:#11392e}
+figure{background:#192622;color:#edf6ee;padding:10px}
+img,video{display:block;width:100%;height:auto}
+figcaption,.demo-meta{display:flex;justify-content:space-between;gap:.6rem;flex-wrap:wrap;padding:.7rem .35rem .15rem;font-size:.83rem}
+figcaption span{color:#c0d8ce}
+.section{padding:4rem 0;border-top:1px solid var(--line)}
+.split{display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:2rem;margin-bottom:1.65rem}
+.split p,.details p,.works p{color:var(--muted)}
+.demo{background:#101b17;color:white;padding:10px;scroll-margin:1rem}
+.demo video{aspect-ratio:16/9;object-fit:contain;background:black}
+.demo-meta span{color:#c3d4cd}
+.credit{font-size:.83rem;color:var(--muted);margin:.85rem 0 1.8rem}
+.details{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.details article,.works article{border-top:1px solid var(--line);padding:1rem 0}
+.works{display:grid;grid-template-columns:1fr 1fr;gap:1rem 2rem;margin-top:1.6rem}
+.works span{display:block;color:var(--green);font-size:.76rem;font-weight:700;margin-bottom:.55rem}
+.about p+p{margin-top:.8rem}
+footer{border-top:1px solid var(--line);border-bottom:0;font-size:.85rem}
+@media(max-width:760px){.hero,.split,.details{grid-template-columns:1fr}.hero{padding:3rem 0}.section{padding:2.8rem 0}}
+@media(max-width:460px){.bar,main,footer{width:calc(100% - 32px)}.bar{align-items:flex-start;flex-direction:column}.works{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
